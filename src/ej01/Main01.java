@@ -13,12 +13,15 @@ public class Main01 {
 		System.out.print("Columnas: ");
 		int columnas = entrada.nextInt();
 		
+		int matriz[][] = new int[filas][columnas];
+		
+		for(int i = 0; i < filas; i++) for(int j = 0; j < columnas; j++) matriz[i][j] = i + j;
+		
 		for(int i = 0; i < filas; i++) {
-			for(int j = 0; j < columnas; j++) System.out.print(i + j);
+			for(int j = 0; j < columnas; j++) System.out.print(matriz[i][j] + " ");
 			System.out.println();
 		}
 		
 		entrada.close();
 	}
-
 }
